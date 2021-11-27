@@ -63,9 +63,10 @@ Complete a month cost analysis of each Azure resource to give an estimate total 
 
 | Azure Resource | Service Tier | Monthly Cost |
 | ------------ | ------------ | ------------ |
-| *Azure Postgres Database* |     |              |
-| *Azure Service Bus*   |         |              |
-| ...                   |         |              |
+| *Azure Postgres Database* |  P1V2   |     $146.96         |
+| *Azure Service Bus*   |    P1V2     |       $0.01       |
+| *Azure App Service*   |     P1V2    |        $138.7      |
+| *Azure Storage*       |    P1V2     |    $21.8     |
 
 ## Architecture Explanation
-This is a placeholder section where you can provide an explanation and reasoning for your architecture selection for both the Azure Web App and Azure Function.
+The web application was implemented beforehand, so i did not change anything other than config.py file and adding __init__.py file under functions folder. The prices of some of the resources are high due to the fact that I chose P1V2 pricing tier. Even though I chose this tier, service bus and storage account prices are low; so I can say using service bus to handle notifications is applicable. Other than that, Postgresql is high in cost as well as app service and these can be reconsidered to be changed.
